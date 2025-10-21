@@ -1,0 +1,723 @@
+/* =========================================================
+   🌊 GLOBAL BASE (untuk semua file)
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #0077b6 0%, #03045e 100%);
+}
+
+/* =========================================================
+   🧭 DARI style.css (NAVBAR, HOME, ABOUT, CONTACT, FOOTER)
+   ========================================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #48cae4;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+/* Home Section */
+.home-section {
+    padding: 120px 0 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ⬅️ Ini yang bikin konten kiri & gambar kanan */
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #48cae4;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #48cae4;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    border: 4px solid #48cae4;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections umum */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #48cae4;
+}
+
+/* Skills Section */
+.skills-section {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: #48cae4;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.skill-card p {
+    color: #ccc;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-text ul {
+    padding-left: 20px;
+    margin: 12px 0;
+}
+
+.about-text li {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.about-image {
+    flex-shrink: 0;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Contact Section */
+.contact-section {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    color: #48cae4;
+    font-size: 1.5rem;
+    width: 30px;
+}
+
+.contact-item p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background: #48cae4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0096c7;
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer p {
+    color: white;
+    opacity: 0.8;
+}
+
+/* =========================================================
+   🏠 DARI index.css (HOME IMAGE & BUTTON)
+   ========================================================= */
+.home-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 4px rgba(52, 152, 219, 0.2),
+        0 0 20px 8px rgba(52, 152, 219, 0.15),
+        0 0 40px 12px rgba(52, 152, 219, 0.1);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-image img:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 0 4px rgba(52, 152, 219, 0.3),
+        0 0 25px 10px rgba(52, 152, 219, 0.25),
+        0 0 50px 15px rgba(52, 152, 219, 0.2);
+}
+
+.download-cv {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 13px;
+}
+
+.btn-download:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   🧠 DARI skills.css (MODAL POPUP)
+   ========================================================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    position: fixed; /* ✅ Ubah dari 'relative' ke 'fixed' */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ✅ Pusatkan secara presisi */
+    width: 60%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: none !important;
+    animation: none !important;
+
+    /* Scroll jika konten panjang */
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+
+    /* Pastikan tidak nempel ke tepi layar */
+    z-index: 1001;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+.close:hover {
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 20% auto;
+        padding: 20px;
+    }
+}
+.modal-content ul {
+    padding-left: 20px;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+.modal-content li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.modal-content p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   🎓 DARI certified.css (CERTIFICATE SECTION)
+   ========================================================= */
+.certified-section {
+  text-align: center;
+  padding: 80px 20px 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #0077b6 0%, #03045e 100%);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.cert-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background-color: #e7e8fc;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.tab-btn.active {
+  color: #2748ff;
+  transform: scale(1.05);
+}
+
+/* Certificate Grid */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* hanya 3 kolom */
+  gap: 25px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.certificate-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+}
+
+/* Efek saat hover pada seluruh kartu */
+.certificate-card:hover {
+  transform: scale(1.05); /* sedikit membesar */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* efek bayangan halus */
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Modal (popup) */
+/* Modal (popup) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Konten modal */
+.modal-content {
+    max-width: 90%;        /* agak lebar tapi tetap responsif */
+    max-height: 90vh;      /* tidak terlalu kecil */
+    animation: zoomIn 0.3s ease;
+     background: none;
+    border: none;
+     border-radius: 0;
+     box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gambar dalam modal */
+.modal-content img {
+    width: auto;           /* biar proporsional */
+    height: auto;          /* biar tidak gepeng */
+    max-width: 100%;       /* tidak keluar layar */
+    max-height: 90vh;      /* tidak kepanjangan */
+    object-fit: contain;   /* menjaga rasio */
+    border-radius: 10px;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tombol close */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+/* Animasi zoom in */
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@media (max-width: 900px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .certificate-card {
+    width: 180px;
+  }
+  .tab-btn {
+    font-size: 0.9rem;
+    padding: 7px 15px;
+  }
+}
+
+/* Hover effect */
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card.hidden {
+  display: none;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 40px;
+}
+
+.btn-back {
+  background-color: #e7e8fc;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #8c9eff;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .home-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .skills-grid,
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .stat h3 {
+        font-size: 2rem;
+    }
+}
