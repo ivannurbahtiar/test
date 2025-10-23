@@ -251,76 +251,42 @@ section {
 }
 
 
-/* Contact Section */
-.contact-section {
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.contact-content {
+/* ==========================
+   SOCIAL MEDIA ICONS
+   ========================== */
+.social-icons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(2, 100px);
     gap: 2rem;
-}
-
-.contact-item {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    margin-top: 3rem;
 }
 
-.contact-item i {
-    color: #48cae4;
-    font-size: 1.5rem;
-    width: 30px;
+.social-link img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 15px;
 }
 
-.contact-item p {
-    color: white;
-    font-size: 1.1rem;
+.social-link:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+/* Responsif di HP */
+@media (max-width: 600px) {
+    .social-icons {
+        grid-template-columns: repeat(2, 80px);
+        gap: 1.5rem;
+    }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1rem;
-    backdrop-filter: blur(10px);
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #ccc;
-}
-
-.contact-form button {
-    padding: 1rem 2rem;
-    background: #48cae4;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #0096c7;
+    .social-link img {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 /* Footer */
@@ -403,7 +369,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%); /* ✅ Pusatkan secara presisi */
     width: 60%;
-    max-width: 400px;
+    max-width: 700px;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -519,7 +485,7 @@ body {
   border-radius: 16px;
   padding: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 220px;
+  width: 300px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -543,8 +509,7 @@ body {
 }
 
 /* Modal (popup) */
-/* Modal (popup) */
-.modal {
+.modall {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -552,14 +517,13 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+   justify-content: center;
     align-items: center;
-    display: flex;
 }
 
 /* Konten modal */
-.modal-content {
+.modal-contentt {
     max-width: 90%;        /* agak lebar tapi tetap responsif */
     max-height: 90vh;      /* tidak terlalu kecil */
     animation: zoomIn 0.3s ease;
@@ -570,6 +534,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+        overflow: auto;
+
 }
 
 /* Gambar dalam modal */
@@ -640,25 +606,6 @@ body {
   display: none;
 }
 
-/* Back Button */
-.back-button {
-  margin-top: 40px;
-}
-
-.btn-back {
-  background-color: #e7e8fc;
-  padding: 10px 25px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-back:hover {
-  background-color: #8c9eff;
-  color: #fff;
-}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -720,4 +667,90 @@ body {
     .stat h3 {
         font-size: 2rem;
     }
+}
+
+/* ==========================
+   PROJECT SECTION
+   ========================== */
+.project-section {
+  padding: 80px 20px;
+  text-align: center;
+  color: #ddd;
+}
+
+.project-tabs {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab-btn {
+  background-color: #dbe2ff;
+  color: #1f1f1f;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #b6c6ff;
+}
+
+.tab-btn.active {
+  background-color: #7f9cff;
+  color: white;
+}
+
+.project-description {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #f1f1f1;
+}
+
+.project-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-description ul li {
+  margin-bottom: 10px;
+}
+
+.project-images {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-images img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .project-description {
+    padding: 0 10px;
+  }
+
+  .project-images img {
+    width: 180px;
+  }
 }

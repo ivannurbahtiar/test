@@ -88,8 +88,15 @@ const skillData = {
     `
 },
     'html-css-card': {
-        title: 'HTML & CSS',
-        description: 'Basic HTML and CSS'
+        title: 'HTML, CSS, & JS',
+        description: `
+        <ul>
+            <li>Membuat struktur halaman dengan HTML.</li>
+            <li>Styling tampilan menggunakan CSS (flexbox, grid).</li>
+            <li>Manipulasi elemen dengan JavaScript dasar.</li>
+            <li>Validasi form dan interaktivitas sederhana.</li>
+        </ul>
+    `
     }
 };
 
@@ -152,7 +159,7 @@ const modalImg = document.getElementById("modalImage");
 const ccloseBtn = document.querySelector(".close");
 
 // Semua gambar sertifikat
-const certImages = document.querySelectorAll(".certificate-card img");
+const certImages = document.querySelectorAll(".certificate-card img, .project-images img");
 
 // Saat gambar diklik
 certImages.forEach((img) => {
@@ -173,4 +180,6 @@ imodal.addEventListener("click", (e) => {
     imodal.style.display = "none";
   }
 });
+
+
 

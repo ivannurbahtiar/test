@@ -1,62 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Portfolio Saya</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project - Portfolio Saya</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Portfolio</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
-                <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
-                <li class="nav-item"><a href="project.html" class="nav-link">Project</a></li>
-                <li class="nav-item"><a href="certified.html" class="nav-link">Certified</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-   <section id="about" class="about-section">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Saya adalah seorang pelajar kelas XI jurusan Teknik Komputer dan Jaringan (TKJ) di SMKN 1 Nglegok. Saya lahir pada 17 Juli 2008 dan merupakan anak pertama dari dua bersaudara. Ayah dan Ibu saya bekerja sebagai pedagang, dan saya memiliki seorang adik berusia 5 tahun.</p>
-                <p>Sejak kecil, saya menempuh pendidikan di:</p>
-                <ul>
-                    <li>TK PGRI Jiwut</li>
-                    <li>SDN Nglegok 2</li>
-                    <li>SMPN Nglegok 2</li>
-                    <li>Saat ini bersekolah di SMKN 1 Nglegok, jurusan TKJ.</li>
-                </ul>
-                <p>Saya memiliki minat besar di bidang jaringan komputer, Linux, dan pemrograman dasar. Selain itu, saya juga aktif di ekstrakurikuler KITS (Komunitas IT SMKN 1 Nglegok) yang membantu saya mengembangkan kemampuan teknis (hard skill) sekaligus keterampilan kerja sama, tanggung jawab, dan disiplin (soft skill).</p>
-            </div>
-            <div class="about-image">
-                <img src="./images/03e0df37-745a-4476-8c0a-a18e673cae8f.jpg" alt="Foto Ivan Nurbahtiar">
-            </div>
-        </div>
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2>Portfolio</h2>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+        <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="project.html" class="nav-link active">Project</a></li>
+        <li class="nav-item"><a href="certified.html" class="nav-link">Certified</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
-</section>
+  </nav>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Portfolio Ivan Nurbahtiar. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- ✅ Section Project -->
+  <section id="project" class="project-section">
+    <div class="container">
+      <h2 class="section-title">Project</h2>
 
-    <script src="script.js"></script>
+      <!-- Tombol Tabs -->
+      <div class="project-tabs">
+        <button class="tab-btn active" data-tab="Module">Module</button>
+        <button class="tab-btn" data-tab="ukt">UKT</button>
+      </div>
+
+      <!-- Deskripsi -->
+      <div class="project-description"  data-tab="Module">
+        <p>
+          Selama bergabung di KITS, saya berkesempatan untuk membuat dan menyusun beberapa modul pembelajaran internal
+          yang digunakan oleh anggota KITS lainnya sebagai bahan latihan dan referensi. Pembuatan modul ini melatih saya
+          untuk memahami materi secara lebih mendalam, serta meningkatkan kemampuan komunikasi teknis dan penyusunan dokumen.
+          <br><br>
+          Berikut <b>tiga modul</b> yang telah saya buat:
+        </p>
+
+        <ul>
+          <li><b>1. Modul MTCNA (MikroTik Certified Network Associate)</b><br>
+            Berisi dasar-dasar konfigurasi MikroTik, termasuk routing, firewall, DHCP, dan bandwidth management. Modul ini dibuat
+            untuk membantu anggota baru memahami konsep jaringan MikroTik secara praktis.
+          </li><br>
+
+          <li><b>2. Modul Debian Server</b><br>
+            Mencakup instalasi, konfigurasi jaringan, DHCP, DNS, dan web server menggunakan sistem operasi Debian. Fokus utamanya
+            adalah penerapan layanan jaringan berbasis Linux di lingkungan lokal.
+          </li><br>
+
+          <li><b>3. Modul CCNA (Cisco Certified Network Associate)</b><br>
+            Berisi dasar teori dan praktik konfigurasi jaringan menggunakan Cisco Packet Tracer, seperti routing OSPF, VLAN, dan
+            subnetting. Modul ini membantu anggota memahami konsep jaringan berbasis Cisco.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Gambar Modul -->
+      <div class="project-images"  data-tab="Module">
+        <img src="./images/MTCNA.png" alt="Module MTCNA">
+        <img src="./images/DEBIAN.png" alt="Module Debian">
+        <img src="./images/MODULE CCNA.png" alt="Module CCNA">
+      </div>
+    </div>
+
+  </section>
+  <!-- ✅ Modal -->
+  <div id="imageModal" class="modall">
+    <span class="close">&times;</span>
+    <img class="modal-contentt" id="modalImage">
+  </div>
+  
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Portfolio Ivan Nurbahtiar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
