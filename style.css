@@ -524,7 +524,7 @@ body {
 
 /* Konten modal */
 .modal-contentt {
-    max-width: 90%;        /* agak lebar tapi tetap responsif */
+    max-width: 70%;        /* agak lebar tapi tetap responsif */
     max-height: 90vh;      /* tidak terlalu kecil */
     animation: zoomIn 0.3s ease;
      background: none;
