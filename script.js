@@ -159,7 +159,7 @@ const modalImg = document.getElementById("modalImage");
 const ccloseBtn = document.querySelector(".close");
 
 // Semua gambar sertifikat
-const certImages = document.querySelectorAll(".certificate-card img, .project-images img");
+const certImages = document.querySelectorAll(".certificate-card img, .project-images img, .home-image img, .about-image img");
 
 // Saat gambar diklik
 certImages.forEach((img) => {
